@@ -22,8 +22,11 @@ This repository provides a PowerShell script to generate a federated AWS Managem
 ## Usage Example
 Run the script with parameters for the IAM user and AWS CLI profile:
 ```powershell
-.\GenerateAWSConsoleURL.ps1 -UnauthorizedUser "sts-lab-3-start-point" -ProfileName "federationtoken"
+.\GenerateAWSConsoleURL.ps1 -UnauthorizedUser "targeted_unauthorized_user" -ProfileName "AWS_profile"
 ```
+Output
+The script generates a URL for AWS Console login:
+```https://signin.aws.amazon.com/federation?Action=login&Issuer=example.com&Destination=https%3A%2F%2Fconsole.aws.amazon.com%2F&SigninToken=<Token>```
 ## References
 HackTricks: AWS STS Post Exploitation
 [Detailed guide on AWS STS token exploitation and console access](https://cloud.hacktricks.xyz/pentesting-cloud/aws-security/aws-post-exploitation/aws-sts-post-exploitation#from-iam-creds-to-console).
