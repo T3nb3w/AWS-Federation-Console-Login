@@ -24,7 +24,7 @@ Run the script with parameters for the IAM user and AWS CLI profile:
 ```powershell
 .\GenerateAWSConsoleURL.ps1 -UnauthorizedUser "targeted_unauthorized_user" -ProfileName "AWS_profile"
 ```
-Output
+### Output
 The script generates a URL for AWS Console login:
 ```https://signin.aws.amazon.com/federation?Action=login&Issuer=example.com&Destination=https%3A%2F%2Fconsole.aws.amazon.com%2F&SigninToken=<Token>```
 ## References
